@@ -1,0 +1,28 @@
+
+<tasks>
+Timer 
+https://roboticsbackend.com/roscpp-timer-with-ros-publish-data-at-a-fixed-rate/
+
+Create class containing 2 subscribers and 1 publisher
+
+In the same file of class.cpp create main function and spin() there
+
+When you create a class, you also need to create header file .h
+
+
+
+
+publisher node 2つ
+Node1: publishes outputs booltype( random )
+Node2: publishes random positive integer (from 1 to 10: random)
+
+Subscirber 一つ
+Node3: subscribes topic from Node4 and prints it to the console.
+
+
+Node4
+Subscribes: Topics from Node1 and Node2 and store these values. ( The only current values are needed to be stored i.e. it does not have to store all the value received by the publisher)
+publishes (at fixed rate of time) the integer value determined as follows;
+    ·if the most currently subscribed bool value is true, then multiply the most currently subscribed integer value by 2.
+    ·if the most currently subscribed bool value is false, then negate the most currently subscribed integer value.
+Note: Use ros::Timer to publish the topic at fixed rate.
